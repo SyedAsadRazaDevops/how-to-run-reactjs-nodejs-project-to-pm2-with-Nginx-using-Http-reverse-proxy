@@ -8,7 +8,7 @@ sudo npm install pm2 -g
 in which we disable the root path so , run throw the pm2
 also disable the defalut index files.
 
-```
+```ruby
 server {
 
         listen 80;
