@@ -1,4 +1,4 @@
-# who-to-run-react-nodejs-project-to-Nginx-with-Nginx
+# who-to-run-react-nodejs-project-to-pm2-with-Nginx
 
 > first install pm2 with global command
 ```
