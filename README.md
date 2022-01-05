@@ -35,3 +35,7 @@ server {
 ```
 npm run dev
 ```
+
+
+done
+Visit https://devstudioonline.com/article/deploy-nextjs-app-with-nginx-and-pm2-on-linux-ubuntu
