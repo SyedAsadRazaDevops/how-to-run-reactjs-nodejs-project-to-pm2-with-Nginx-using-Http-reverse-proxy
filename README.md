@@ -87,13 +87,6 @@ pm2 monit
 
 
 
-
-
-
-
-
-
-
-
 done
-Visit https://devstudioonline.com/article/deploy-nextjs-app-with-nginx-and-pm2-on-linux-ubuntu
+Visit :https://devstudioonline.com/article/deploy-nextjs-app-with-nginx-and-pm2-on-linux-ubuntu
+Visit :https://pm2.io/docs/runtime/guide/process-management/
