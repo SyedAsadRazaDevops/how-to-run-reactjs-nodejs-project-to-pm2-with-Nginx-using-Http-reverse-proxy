@@ -45,14 +45,14 @@ stop and delete a process from the list
 ```
 pm2 delete app
 ```
-Run in frontEndNestJs folder
+Run in frontEnd folder
 ```
-pm2 start npm --name "ascendportal" -- start
+pm2 start npm --name "myfrontend" -- start
 ```
 # NOTE
 if you not build the npm ,then run this command 
 ```
-pm2 start server.js --max-memory-restart=50G -i 0 -f
+pm2 start node.js --max-memory-restart=50G -i 0 -f
 ```
 Note : run above command in (public_html)project folder where node/react are deplyed.
 
