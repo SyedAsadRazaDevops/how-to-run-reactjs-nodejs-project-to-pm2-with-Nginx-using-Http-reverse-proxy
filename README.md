@@ -14,10 +14,10 @@ server {
         listen 80;
         listen [::]:80;
 
-        server_name www.test.ascend.com.sa test.ascend.com.sa;
+        server_name www.xxxxx.com xxxx.com;
 #       server_name _;
 
-#        root /var/www/admin/build;
+#        root /var/www/myproject/build;
 #       index index.html index.htm index.nginx-debian.html;
 
      location / {
@@ -30,14 +30,13 @@ server {
 }
 }
 ```
-#GO TO THE PROJECT DIRECTORY THEN GO TO YOUR FRONTEND/BACKEND FOLDER
+# GO TO THE PROJECT DIRECTORY THEN GO TO YOUR FRONTEND/BACKEND FOLDER
 >run this on dev to configure / and check errors
 ```
 npm run dev
 ```
-====================================================================
 
-Have to create build with npm :
+>Have to create build with npm :
 ```
 npm run build
 ```
@@ -50,6 +49,13 @@ Run in frontEndNestJs folder
 ```
 pm2 start npm --name "ascendportal" -- start
 ```
+# NOTE
+if you not build the npm ,then run this command 
+```
+pm2 start server.js --max-memory-restart=50G -i 0 -f
+```
+Note : run above command in (public_html)project folder where node/react are deplyed.
+
 Routine
 -------------------------
 >Once setup your process list, every actions are done with the process name.
