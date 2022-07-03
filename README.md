@@ -32,7 +32,7 @@ server {
 }
 ```
 # Nginx as a HTTP proxy [example = 2]
-```
+```ruby
 upstream my_nodejs_upstream {
     server 127.0.0.1:3001;
     keepalive 64;
