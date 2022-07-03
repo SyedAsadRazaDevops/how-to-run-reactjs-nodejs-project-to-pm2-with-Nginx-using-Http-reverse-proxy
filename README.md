@@ -111,7 +111,7 @@ Routine
 -------------------------
 ```ruby
 >Once setup your process list, every actions are done with the process name.
->kill the process but keep it in the process list
+#kill the process but keep it in the process list
 
 pm2 stop app
 
