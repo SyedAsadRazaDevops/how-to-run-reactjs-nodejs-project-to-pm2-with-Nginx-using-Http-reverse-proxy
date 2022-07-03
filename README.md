@@ -86,17 +86,17 @@ module.exports = {
 >run this on dev to configure / and check errors (for reverse-proxy use "./bin/www" to run the project) 
 ```
 npm run dev
->Have to create build with npm :
+#Have to create build with npm :
 npm run build
 ```
 >PM2 commands
 ```ruby
->Delete current pm2 instance
->use stop and delete a process from the list
+#Delete current pm2 instance
+#use stop and delete a process from the list
 
 pm2 delete app
 
->Run in frontEnd folder
+#Run in frontEnd folder
 
 pm2 start npm --name "myfrontend" -- start
 ```
@@ -110,27 +110,27 @@ Note : run above command in (public_html)project folder where node/react are dep
 Routine
 -------------------------
 ```ruby
->Once setup your process list, every actions are done with the process name.
+#Once setup your process list, every actions are done with the process name.
 #kill the process but keep it in the process list
 
 pm2 stop app
 
->start the process again
+#start the process again
 
 pm2 start app
 
->both stop and start
+#both stop and start
 
 pm2 restart app
 ```
 Save your process list
 ----------------------------------
 ```ruby
->save your list in hard disk memory
+#save your list in hard disk memory
 
 pm2 save
 
->resurrect your list previously saved
+#resurrect your list previously saved
 
 pm2 resurrect
 ```
