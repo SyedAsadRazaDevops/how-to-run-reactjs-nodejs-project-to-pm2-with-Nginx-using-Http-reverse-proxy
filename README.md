@@ -61,22 +61,43 @@ server {
 ```
 [LINK]: https://pm2.keymetrics.io/docs/tutorials/pm2-nginx-production-setup
 
-
+# Template to create the script-configration file to run it as one command
+```ruby
+module.exports = {
+  apps: [
+    {
+      name: "project name",
+      script: "./bin/www",
+      instances: "<run the no. of instance as you need/ 4",
+      exec_mode: "cluster",
+      watch: "./bin/www",
+      increment_var: "PORT",
+      shutdown_with_message: true,
+      env: {
+        PORT: <use any port/ 3000>,
+      },
+    },
+  ],
+};
+```
+>or run it as an simple-way
 # GO TO THE PROJECT DIRECTORY THEN GO TO YOUR FRONTEND/BACKEND FOLDER
 
->run this on dev to configure / and check errors
+>run this on dev to configure / and check errors (for reverse-proxy use "./bin/www" to run the project) 
 ```
 npm run dev
 >Have to create build with npm :
 npm run build
 ```
+>PM2 commands
+```ruby
 >Delete current pm2 instance
-stop and delete a process from the list
-```
+>use stop and delete a process from the list
+
 pm2 delete app
-```
-Run in frontEnd folder
-```
+
+>Run in frontEnd folder
+
 pm2 start npm --name "myfrontend" -- start
 ```
 # NOTE
@@ -88,29 +109,29 @@ Note : run above command in (public_html)project folder where node/react are dep
 
 Routine
 -------------------------
+```ruby
 >Once setup your process list, every actions are done with the process name.
+>kill the process but keep it in the process list
 
-#kill the process but keep it in the process list
-```
 pm2 stop app
-```
-#start the process again
-```
+
+>start the process again
+
 pm2 start app
-```
-#both stop and start
-```
+
+>both stop and start
+
 pm2 restart app
 ```
 Save your process list
 ----------------------------------
+```ruby
+>save your list in hard disk memory
 
-#save your list in hard disk memory
-```
 pm2 save
-```
-#resurrect your list previously saved
-```
+
+>resurrect your list previously saved
+
 pm2 resurrect
 ```
 
@@ -127,4 +148,5 @@ done
 Visit :https://devstudioonline.com/article/deploy-nextjs-app-with-nginx-and-pm2-on-linux-ubuntu
 Visit :https://pm2.io/docs/runtime/guide/process-management/
 >for further problem in CROS css style-sheet
+
 Visit :https://stackoverflow.com/questions/57715058/get-css-from-different-domain-blocked-by-cors-policy-no-access-control-allow-o
