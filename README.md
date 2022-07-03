@@ -1,4 +1,4 @@
-# who to run reactjs/nodejs project to pm2 with Nginx using Http reverse proxy
+# How to run reactjs/nodejs project to pm2 with Nginx using Http reverse proxy
 
 > first install pm2 with global command
 ```
