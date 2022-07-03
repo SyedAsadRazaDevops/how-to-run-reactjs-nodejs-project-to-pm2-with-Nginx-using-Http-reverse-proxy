@@ -93,11 +93,8 @@ npm run build
 ```ruby
 #Delete current pm2 instance
 #use stop and delete a process from the list
-
 pm2 delete app
-
 #Run in frontEnd folder
-
 pm2 start npm --name "myfrontend" -- start
 ```
 # NOTE
@@ -112,26 +109,18 @@ Routine
 ```ruby
 #Once setup your process list, every actions are done with the process name.
 #kill the process but keep it in the process list
-
 pm2 stop app
-
 #start the process again
-
 pm2 start app
-
 #both stop and start
-
 pm2 restart app
 ```
 Save your process list
 ----------------------------------
 ```ruby
 #save your list in hard disk memory
-
 pm2 save
-
 #resurrect your list previously saved
-
 pm2 resurrect
 ```
 
@@ -141,10 +130,8 @@ Local Monitoring
 pm2 monit
 ```
 
+**DONE**
 
-
-
-done
 Visit :https://devstudioonline.com/article/deploy-nextjs-app-with-nginx-and-pm2-on-linux-ubuntu
 Visit :https://pm2.io/docs/runtime/guide/process-management/
 >for further problem in CROS css style-sheet
