@@ -126,3 +126,5 @@ pm2 monit
 done
 Visit :https://devstudioonline.com/article/deploy-nextjs-app-with-nginx-and-pm2-on-linux-ubuntu
 Visit :https://pm2.io/docs/runtime/guide/process-management/
+>for further problem in CROS css style-sheet
+Visit :https://stackoverflow.com/questions/57715058/get-css-from-different-domain-blocked-by-cors-policy-no-access-control-allow-o
