@@ -8,6 +8,7 @@ sudo npm install pm2 -g
 in which we disable the root path so , run throw the pm2
 also disable the defalut index files.
 
+# Nginx as a HTTP proxy [example = 1]
 ```ruby
 server {
 
@@ -30,14 +31,43 @@ server {
 }
 }
 ```
+# Nginx as a HTTP proxy [example = 2]
+```
+upstream my_nodejs_upstream {
+    server 127.0.0.1:3001;
+    keepalive 64;
+}
+
+server {
+        listen 80;
+        listen [::]:80;
+    
+    server_name www.my-website.com;
+   
+    location / {
+    	proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Real-IP $remote_addr;
+    	proxy_set_header Host $http_host;
+        
+    	proxy_http_version 1.1;
+    	proxy_set_header Upgrade $http_upgrade;
+    	proxy_set_header Connection "upgrade";
+        
+    	proxy_pass http://my_nodejs_upstream/;
+    	proxy_redirect off;
+    	proxy_read_timeout 240s;
+    }
+}
+```
+[LINK]: https://pm2.keymetrics.io/docs/tutorials/pm2-nginx-production-setup
+
+
 # GO TO THE PROJECT DIRECTORY THEN GO TO YOUR FRONTEND/BACKEND FOLDER
+
 >run this on dev to configure / and check errors
 ```
 npm run dev
-```
-
 >Have to create build with npm :
-```
 npm run build
 ```
 >Delete current pm2 instance
